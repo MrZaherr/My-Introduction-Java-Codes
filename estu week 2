@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class MrZaher {
+    public static void main(String[] args) {
+        Scanner MrZaher = new Scanner(System.in);
+
+        System.out.println("Please enter the values of triangle in order");
+        double side1, side2, side3,u,area_of_triangle;
+        side1 = MrZaher.nextDouble();
+        side2 = MrZaher.nextDouble();
+        side3 = MrZaher.nextDouble();
+        u = (side1 + side2 + side3) / 2;
+        area_of_triangle = Math.sqrt(u * (u - side1) * (u - side2) * (u - side3));
+
+        if (side1 + side2 < side3 || side2 + side3 < side1 || side1 + side3 < side2) {
+            System.out.println("hatalı girinti");
+
+        } else {
+            System.out.println(area_of_triangle);
+        }
+    }
+}
