@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Diziler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the length of the array");
+        int diziuzunluğu = scanner.nextInt();
+        scanner.nextLine();
+
+        String[] diziler = new String[diziuzunluğu];
+        for (int i = 0; i < diziuzunluğu; i++) {
+            System.out.println("Please enter the "+ i+". value of the array");
+            diziler[i]=scanner.nextLine();
+
+        }
+        for (int a=0; a<diziuzunluğu;a++ ){
+            System.out.println(diziler[a]);
+        }
+
+
+    }
+}
