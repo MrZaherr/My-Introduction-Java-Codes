@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class lab4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("If you want to use euclidian theorem,press 1");
+        int sayi1 = scanner.nextInt();
+        int a = (int) (Math.random() * 1000 + 1);
+        int b = (int) (Math.random() * 1000 + 1);
+
+        if (a < b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        if (sayi1 == 1) {
+
+
+            System.out.println("a= " + a + " b= " + b);
+            int k = a % b;
+            while (k != 0) {
+                a = b;
+                b = k;
+                k = a % b;
+            }
+            System.out.println("The greatest common divisor is : " + b);
+        } else {
+            System.out.println("Brute force methos is being used ");
+            System.out.println("a= " + a + " b= " + b);
+            int ebob=1;
+            for(int i=1; ((a%i==0)&& (b%i==0))&& i<=b; i++ ){
+                ebob=i;
+
+
+            }
+            System.out.println("The greatest common divisor is : "+ ebob   );
+
+
+
+
+
+
+
+        }
+    }
+}
