@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Pattern_of_stars {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int border = scan.nextInt();
+
+        for (int i = 1; i <= border; i++) {
+            String s = "*";
+            for (int j = border; j >= 2; j--) {
+                if (j > i) {
+                    s = " " + s;
+                } else
+                    s += "**";
+            }
+            System.out.println(s);
+        }
+    }
+}
